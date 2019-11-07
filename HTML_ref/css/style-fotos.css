@@ -1,0 +1,205 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+a{
+   text-decoration:none;
+   color: #ffc600;
+   display: block;
+   padding: 20px 0;
+   text-decoration: none;
+}
+body {
+   background-color: #7d0093;
+   font-family: 'Calibri', 'Open Sans', sans-serif;
+   color:  #ffc600;
+}
+h1,h2,h3,h4,h5{
+   font-family: 'Fredoka One', 'Londrina Solid', cursive;
+   }
+   #teste {
+      display: none;
+   }
+ 
+   h1{
+   display:none;
+}
+#logo-area {
+   
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   text-align: center;
+   padding: 1em;
+   }
+
+#logo-area>img{
+   padding: 3em 0 0 0;
+   width: 25%;
+}
+nav #bt-mobile-menu{
+   display: none;
+}
+#bt-mobile-menu a {
+   text-align: center;
+  
+}
+nav ul > li > a:hover {
+  background-color:#7d0093;
+  color: #ffc600;
+  
+}
+ 
+.section-container1{
+   margin: 0 auto;
+   max-width: 1360px;
+   background-color: #ffc600;
+  
+}
+.section-container1 a {
+   color: #7d0093;
+}
+.section-container1 ul {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: space-evenly;
+   align-items: center;
+   font-size: 1.3em;
+   list-style-type: none;
+   
+ 
+  
+  
+  
+}
+ 
+h2 {
+   font-size: 1.3em;
+   padding: 0 0 20px 0;
+   color:#7d0093;
+   text-shadow:
+   -1px -1px 0 #ff9933,
+   1px -1px 0 #ff9933,
+  -1px  1px 0 #ff9933,
+   1px  1px 0 #ff9933;
+  }
+  h2 img {
+     background-color: #ff9933;
+     position: fixed;
+     width: 100%;
+     z-index: 999;
+  }
+  
+  
+  #fotos h3 {
+     display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: flex-start;
+      align-content: stretch;
+
+  }
+     
+
+  .flex-group {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+ }
+ 
+ .flex-group.food-section {
+     justify-content: space-evenly;
+     align-items: center;
+    
+     
+ }
+
+ #historia ul {
+    align-items:center;
+    font-size: 1.3em;
+ }
+#programaçao-de-eventos h4 {
+   display:flex;
+   align-items:flex-end;
+   justify-content: center;
+   font-size: 1.3em;
+}
+ 
+#programaçao-de-eventos ul {
+   display:flex;
+   align-items:flex-end;
+   justify-content: center;
+   background-color:#ffc600;
+ 
+}
+
+
+ 
+#programaçao-de-eventos a {
+   color: #7d0093;
+   list-style-type:none;
+}
+#programaçao-de-eventos li {
+   font-size: 1.3em;
+}
+#programaçao-de-eventos ul > li > a:hover {
+  background-color:#7d0093;
+  color:#ffc600;
+}
+ 
+#termos h6 {
+   display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: stretch;
+    font-size: 1.5em;
+}
+ 
+ #contatos h5 {
+     font-size: 1.3em;
+ }
+ #contatos ul {
+    font-size: 1.0em;
+ }
+ 
+#termos ul {
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   font-size: 1.3em;
+}
+ 
+@media (max-width: 625px){
+ 
+  
+   nav #bt-mobile-menu {
+       display: block;
+   }
+  
+   nav .bt-common-menu {
+       display:none;
+
+   }
+  
+   nav .bt-common-menu.active {
+       display: block;
+   }
+  
+   nav ul.mobile-mode {
+       display: flex;
+       flex-direction: column;
+   }
+}
+  
+footer {
+  background-color: #ffc600;
+  font-weight: bold;
+  text-align: center;
+  color: #7d0093;
+  width: 100%;
+}

@@ -1,0 +1,29 @@
+
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url(bg.jpg);
+        background-size: cover;
+        font-family:'poppins',sans-serif;
+    }
+    .calendario {
+        width: 300px;
+        height:auto ;
+        background-color: #fff;
+        box-sizing:border-box;
+    }
+
+    .calendario .datas{
+        padding:20px;
+        display:grid;
+        grid-template-columns: repeat(auto-fit,minmax(25px,1fr));
+        grid-gap: 10px;
+        box-sizing: border-box;
+    }
+     .dias{
+        flex-direction: row;
+    }
