@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var nomeView = (string) ViewData["NomeView"];
+}
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -9,9 +12,18 @@
     <link href="img/logo_simbolo.png" rel="icon" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-
+    <link href="~/css/style.css" rel="stylesheet" type="text/css">
+    @if(!"Home".Equals(nomeView))
+    {
+    <link href="css/style-secondary-pages.css" rel="stylesheet" type="text/css">
+    <link href="css/style-form-pages.css" rel="stylesheet" type="text/css">
+    }
     <!-- Importar o Font Awesome para o projeto -->
+
+    <!--PAREI AQUI -->
+
+
+    
     <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
 </head>
 
@@ -20,13 +32,7 @@
 
 
 
-        <section id="logo-area">
-            <img src="img/logo.png">
-            <hgroup>
-                <h1>role top</h1>
-                <h2></h2>
-            </hgroup>
-        </section>
+        
 
 
         <li id="bt-mobile-menu">
