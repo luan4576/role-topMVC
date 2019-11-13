@@ -22,19 +22,13 @@
 
     <!--PAREI AQUI -->
 
-
-    
     <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
 </head>
 
-<body>
+<body class="flex-container">
+    <header>
+
     <nav>
-
-
-
-        
-
-
         <li id="bt-mobile-menu">
             <!-- HTML para colocar os ícones do FA -->
             <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
@@ -43,17 +37,21 @@
         </li>
         <div class="section-container1">
             <ul>
-                <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html"
-                        class="active">principal</a></li>
-                <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="login.html">login e cadastro</a></li>
-                <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="fotos.html">galeria de fotos</a></li>
-                <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html#localizaçao">Localizaçao</a>
-                </li>
-                <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="login-adm.html">login adm</a></li>
+                <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Home" asp-action="Index" class="active">principal</a></li>
+                <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="cliente" asp-action="Login">login e cadastro</a></li>
+                <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Home")#galeriadefotos'>galeria de fotos</a></li>
+                <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Home")#local'>Local</a></li>
+                <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Home" asp-action="Index" class="active">login adm</a></li>
             </ul>
         </div>
     </nav>
-
+    <!--comentario para eu nao esquecer de colocar aqui o logo area -->
+        @if("Home".Equals(nomeView))
+        {
+            Html.RenderPartial("_HeaderHomePage");
+        }
+    </header>
+    @RenderBody()
 
     <section id="fotos">
         <div class="section-container">
