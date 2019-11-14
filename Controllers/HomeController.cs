@@ -12,6 +12,7 @@ namespace role_topMVC.Controllers
     {
         public IActionResult Index()
         {
+            ViewData["Nomeview"] = "Home";
             return View();
         }
 

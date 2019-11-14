@@ -12083,11 +12083,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\50539955833\\Documents\\rtMVC\\role-topMVC.csproj",
+      "projectUniqueName": "C:\\Users\\50539955833\\Documents\\role-topMVC\\role-topMVC.csproj",
       "projectName": "role-topMVC",
-      "projectPath": "C:\\Users\\50539955833\\Documents\\rtMVC\\role-topMVC.csproj",
+      "projectPath": "C:\\Users\\50539955833\\Documents\\role-topMVC\\role-topMVC.csproj",
       "packagesPath": "C:\\Users\\50539955833\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\50539955833\\Documents\\rtMVC\\obj\\",
+      "outputPath": "C:\\Users\\50539955833\\Documents\\role-topMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
