@@ -1,6 +1,8 @@
 using System;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using role_topMVC.Models;
+using role_topMVC.Repositories;
 
 namespace role_topMVC.Controllers {
     public class ClienteController : Controller {
@@ -24,6 +26,10 @@ namespace role_topMVC.Controllers {
                 System.Console.WriteLine (e.StackTrace);
                 return View ("erro");
             }
-        }
+
+
+    
+    
     }
+}
 }
