@@ -3001,11 +3001,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Cadastro\\Index.cshtml",
-      "TargetPath": "Views\\Cadastro\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "Views\\Cliente\\Login.cshtml",
       "TargetPath": "Views\\Cliente\\Login.cshtml",
       "FileKind": "mvc"

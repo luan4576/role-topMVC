@@ -1,4 +1,27 @@
-﻿<main>
+<main>
+        <h2>Login</h2>
+        <form method="GET" action="aprovar-eventos-adm.html">
+
+            <div>
+                <label for="email">E-mail</label>
+                <br />
+                <input id="email" type="email" />
+            </div>
+
+            <div>
+                <label for="senha">Senha</label>
+                <br />
+                <input id="senha" type="password" />
+            </div>
+
+            <a onclick="toggleMobileMenu()"  href="pacotes.html">entrar</a>
+        </form>
+
+    </main>
+
+
+
+    <main>
     <h2>Cadastro</h2>
     <form method="POST" action='@Url.Action("CadastrarCliente", "Cadastro")'>
         <div>
@@ -47,5 +70,3 @@
         
     </form>
 </main>
-
-
