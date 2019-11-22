@@ -2971,6 +2971,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\imagens\\Fotos.cshtml",
+      "TargetPath": "Views\\imagens\\Fotos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
@@ -2986,6 +2991,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Pacote\\Pacotes.cshtml",
+      "TargetPath": "Views\\Pacote\\Pacotes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Cadastro\\Login.cshtml",
+      "TargetPath": "Views\\Cadastro\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Shared\\_CookieConsentPartial.cshtml",
       "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
       "FileKind": "mvc"
@@ -2998,11 +3013,6 @@
     {
       "FilePath": "Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Cliente\\Login.cshtml",
-      "TargetPath": "Views\\Cliente\\Login.cshtml",
       "FileKind": "mvc"
     },
     {

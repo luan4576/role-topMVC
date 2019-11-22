@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>fotos</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans" rel="stylesheet">
+   <link href="css/style-fotos.css" rel="stylesheet" type="text/css">
+   <!-- Importar o Font Awesome para o projeto -->
+   <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+</head>
+ 
+<body>
+   <nav>
+      
+      
+      
+       <section id="logo-area">
+           <hgroup>
+               <h1>fotos</h1>
+               
+           </hgroup>
+       </section>
+
+
+       <li id="bt-mobile-menu">
+               <!-- HTML para colocar os ícones do FA -->
+               <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                   <i class="fa fa-bars"></i>
+               </a>
+           </li>
+           <div class="section-container1">
+                <ul>
+                   <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html" class="active">principal</a></li>
+                   <li class="bt-common-menu"><a onclick="toggleMobileMenu()"  href="index.html#login">login e cadastro</a></li>
+                   <li class="bt-common-menu"><a onclick="toggleMobileMenu()"  href="index.html#fotos">galeria de fotos</a></li>
+                   <li class="bt-common-menu"><a onclick="toggleMobileMenu()"  href="index.html#localizaçao">Localizaçao</a></li>
+                   <li class="bt-common-menu"><a onclick="toggleMobileMenu()"  href="pacotes.html">pacotes</a></li>
+                   <li class="bt-common-menu"><a onclick="toggleMobileMenu()"  href="index.html#login-adm">login adm</a></li>
+                </ul>
+            </div>    
+   </nav>
+
+
+   <section id="fotos">
+        <div class="section-container">
+          
+
+            <div class="flex-group food-section">
+                <div class="food-container">
+                    <img src="img/balada 1.jpg" alt="fotos da balada1"
+                        title="so mandelao" />
+                   
+                </div>
+                <div class="food-container">
+                    <img src="img/balada 2.jpg" alt="Foto da balada2"
+                        title="brota maldita" />
+                    
+                </div>
+                <div class="food-container">
+                    <img src="img/balada5.jpg" alt="Foto da balada4"
+                        title="vem balança a raba" />
+                   
+                </div>
+
+                <div class="food-container">
+                    <img src="img/baladas 3.jpg" alt="Foto da balada4"
+                        title="vem balança a raba" />
+                   
+                </div>
+                
+                <div class="food-container">
+                    <img src="img/baladas4.jpg" alt="Foto da balada4"
+                        title="vem balança a raba" />
+                   
+                </div>
+
+                
+                    <div class="food-container">
+                        <img src="img/balada 1.jpg" alt="fotos da balada1"
+                            title="so mandelao" />
+                       
+                    </div>
+                    <div class="food-container">
+                        <img src="img/balada 2.jpg" alt="Foto da balada2"
+                            title="brota maldita" />
+                        
+                    </div>
+                    <div class="food-container">
+                        <img src="img/balada5.jpg" alt="Foto da balada4"
+                            title="vem balança a raba" />
+                       
+                    </div>
+    
+                    <div class="food-container">
+                        <img src="img/baladas 3.jpg" alt="Foto da balada4"
+                            title="vem balança a raba" />
+                       
+                    </div>
+                    
+                    <div class="food-container">
+                        <img src="img/baladas4.jpg" alt="Foto da balada4"
+                            title="vem balança a raba" />
+                       
+                    </div>
+
+                    
+                        <div class="food-container">
+                            <img src="img/balada 1.jpg" alt="fotos da balada1"
+                                title="so mandelao" />
+                           
+                        </div>
+                        <div class="food-container">
+                            <img src="img/balada 2.jpg" alt="Foto da balada2"
+                                title="brota maldita" />
+                            
+                        </div>
+                        <div class="food-container">
+                            <img src="img/balada5.jpg" alt="Foto da balada4"
+                                title="vem balança a raba" />
+                           
+                        </div>
+        
+                        <div class="food-container">
+                            <img src="img/baladas 3.jpg" alt="Foto da balada4"
+                                title="vem balança a raba" />
+                           
+                        </div>
+                        
+                        <div class="food-container">
+                            <img src="img/baladas4.jpg" alt="Foto da balada4"
+                                title="vem balança a raba" />
+                            </div>
+                         </section>
+
+
+
+
+
+                         <script>
+                                function toggleMobileMenu() {
+                                    var ul = document.querySelector("nav ul");
+                                    var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+                                    var icon = document.querySelector(".icon > i");
+                       
+                                    ul.classList.toggle("mobile-mode");
+                       
+                                    if (icon.classList.contains("fa-bars")) {
+                                        icon.classList.remove("fa-bars");
+                                        icon.classList.remove("fa");
+                       
+                                        icon.classList.add("fas");
+                                        icon.classList.add("fa-times");
+                                    } else {
+                                        icon.classList.remove("fas");
+                                        icon.classList.remove("fa-times");
+                       
+                                        icon.classList.add("fa");
+                                        icon.classList.add("fa-bars");
+                                    }
+                       
+                                    for (var button of commonButtons) {
+                                        button.classList.toggle("active");
+                                    }
+                       
+                                }
+                               
+                            </script>
+    </body>
+    </html>
