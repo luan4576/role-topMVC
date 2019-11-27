@@ -17,31 +17,24 @@
 </head>
 
 <body class="flex-container">
-    <header>
         <nav>
-            <div class="section-container">
-                <ul>
-                    <li id="bt-mobile-menu">
+                <li id="bt-mobile-menu">
                         <!-- HTML para colocar os ícones do FA -->
                         <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
                             <i class="fa fa-bars"></i>
                         </a>
                     </li>
                     <div class="section-container1">
-                        <ul>
-                           <li class="bt-common-menu"><a onclick="toggleMobileMenu()"  href="index.html" class="active">principal</a></li>
-                           <li class="bt-common-menu"><a onclick="toggleMobileMenu()"  href="login.html">login e cadastro</a></li>
-                           <li class="bt-common-menu"><a onclick="toggleMobileMenu()"  href="fotos.html">galeria de fotos</a></li>
-                           <li class="bt-common-menu"><a onclick="toggleMobileMenu()"  href="index.html#localizaçao">Localizaçao</a></li>
-                           <li class="bt-common-menu"><a onclick="toggleMobileMenu()"  href="pacotes.html">pacotes</a></li>
-                           <li class="bt-common-menu"><a onclick="toggleMobileMenu()"  href="login-adm.html">login adm</a></li>
-                        </ul>
-            </div>
-        </nav>
-        <hgroup>
-            <h1>login</h1>
-        </hgroup>
-    </header>
+                         <ul>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html" class="active">principal</a></li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()"  href="index.html#login">login e cadastro</a></li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()"  href="index.html#fotos">galeria de fotos</a></li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()"  href="index.html#localizaçao">Localizaçao</a></li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()"  href="pacotes.html">pacotes</a></li>
+                            <li class="bt-common-menu"><a onclick="toggleMobileMenu()"  href="index.html#login-adm">login adm</a></li>
+                         </ul>
+                     </div>    
+            </nav>
 
     <main>
         <h2>Login</h2>
@@ -90,7 +83,7 @@
             <div>
                 <label for="senha">senha</label>
                 <br />
-                <input id="senha" type="text" disabled/>
+                <input id="senha" type="password" />
             </div>
 
             <a onclick="toggleMobileMenu()"  href="pacotes.html">entrar</a>
@@ -124,10 +117,10 @@
                 icon.classList.remove("fa");
 
                 icon.classList.add("fas");
-                icon.classList.add("fa-skull");
+                icon.classList.add("fa-times");
             } else {
                 icon.classList.remove("fas");
-                icon.classList.remove("fa-skull");
+                icon.classList.remove("fa-times");
 
                 icon.classList.add("fa");
                 icon.classList.add("fa-bars");
