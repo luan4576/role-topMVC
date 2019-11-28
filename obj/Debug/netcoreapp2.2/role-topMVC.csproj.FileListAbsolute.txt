@@ -59,6 +59,3 @@ C:\Users\50539955833\Documents\rtMVC\obj\Debug\netcoreapp2.2\role-topMVC.dll
 C:\Users\50539955833\Documents\rtMVC\obj\Debug\netcoreapp2.2\role-topMVC.pdb
 C:\Users\50539955833\Documents\rtMVC\obj\Debug\netcoreapp2.2\role-topMVC.csproj.CopyComplete
 C:\Users\50539955833\Documents\role-topMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_HeaderHomePage.g.cshtml.cs
-C:\Users\50539955833\Documents\role-topMVC\obj\Debug\netcoreapp2.2\Razor\Views\Pacote\Pacotes.g.cshtml.cs
-C:\Users\50539955833\Documents\role-topMVC\obj\Debug\netcoreapp2.2\Razor\Views\imagens\Fotos.g.cshtml.cs
-C:\Users\50539955833\Documents\role-topMVC\obj\Debug\netcoreapp2.2\Razor\Views\Cliente\Login.g.cshtml.cs

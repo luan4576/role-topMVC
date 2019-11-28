@@ -27,20 +27,20 @@
 <body class="flex-container">
     <header>
     <nav>
+        <div class="section-container1">
+            <ul>
         <li id="bt-mobile-menu">
             <!-- HTML para colocar os ícones do FA -->
             <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
                 <i class="fa fa-bars"></i>
             </a>
         </li>
-        <div class="section-container1">
-            <ul>
                 <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Home" asp-action="Index" class="active">principal</a></li>
                 <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Home")#galeriadefotos'>galeria de fotos</a></li>
                 <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Home")#local'>Localizaçao</a></li>
                 <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index","Home")'>pacotes</a></li>
                 <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Home" asp-action="Index" class="active">login adm</a></li>
-            @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+                @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
                     {
                     <li class="bt-common-menu"><a onclick="toggleMobileMenu()"asp-controller="cliente" asp-action="Login" >login/cadastro</a></li>
                     }
@@ -68,11 +68,11 @@
                 <br />
                 11 1234 5678
             </address>
+    <a href="#">voltar para o topo</a>
 
         </div>
     </footer>
 
-    <a href="#">voltar para o topo</a>
     <script>
         function toggleMobileMenu() {
             var ul = document.querySelector("nav ul");
