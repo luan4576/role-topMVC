@@ -3,8 +3,8 @@ using role_topMVC.Models;
 
 namespace role_topMVC.ViewModels
 {
-    public class HistoricoViewModel
+    public class HistoricoViewModel : BaseViewModel
     {
-        public List<Contrato> contratos {get;set;}
+        public List<Contrato> Contratos {get;set;}
     }
 }

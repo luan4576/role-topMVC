@@ -33,5 +33,16 @@ namespace role_topMVC.Repositories
                 contrato.Cliente.Nome = ExtrairValorDoCampo("cliente_nome", linha);
                 contrato.Cliente.Cpf = ExtrairValorDoCampo("cliente_cpf", linha);
                 contrato.Cliente.Email = ExtrairValorDoCampo("cliente_email", linha);
+            }
+        }
+
+         private string PrepararRegistroCSV(Contrato contrato)
+        {
+            Cliente cliente = contrato.Cliente;
+            
+
+            return $"cliente_nome={cliente.Nome};cliente_endereco={cliente.Cpf};cliente_email={cliente.Email};data_pedido={contrato.DataDoPedido};preco-total={contrato.PrecoTotal}";
+        }
+
     }
 }
