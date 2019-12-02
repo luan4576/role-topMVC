@@ -1,0 +1,67 @@
+<main>
+        <h2>pagar</h2>
+        <form method="POST" action='@Url.Action("Index","Pacote")'>
+
+            <div>
+                <label for="numero-do-cartao">numero do cartao</label>
+                <br />
+                <input id="numero-do-cartao" type="numero-do-cartao" />
+            </div>
+
+            <div>
+                <label for="senha">senha do cartao</label>
+                <br />
+                <input id="senha-do-cartao" type="password" />
+            </div>
+            <div>
+                    <label for="cpf-cnpj">cpf ou cnpj</label>
+                    <br />
+                    <input id="cpf-cnpj" type="cpf-cnpj" />
+                </div>
+            <label for="pacotes">escolha o seu e contrate</label>
+            <a href="#">1 dia por apenas 10,000 mil </a>
+            <a href="#">2 dias por apenas 18,000 mil</a>
+            <a href="#">3 dias por apenas 27,000 mil</a>
+
+            <tr>
+                <label for="agende">agende seu dia</label>
+            </tr>
+            <input id="data-nascimento" type="date" maxlength="20" minlength="3" name="data-nascimento" />
+
+            <input type="submit" value="efetuar pagamento!" />
+        </form>
+
+    </main>
+
+ 
+
+
+
+   
+     <main>
+        <h2>cancelar pagamento</h2>
+        <form method="GET" action="index.html">
+            <div>
+                <label for="numero do cartao">Numero do cartao</label>
+                <br />
+                <input id="nome" type="text" maxlength="20" minlength="3" name="nome"/>
+            </div>
+
+            <div>
+                <label for="senha-do-cartao">senha do cartao</label>
+                <br />
+                <input id="senha-do-cartao" type="text" maxlength="20" minlength="3" name="endereco" />
+            </div>
+
+            <div>
+                <label for="cpf-ou-cnpj">cpf ou cnpj</label>
+                <br />
+                <input id="cpf-ou-cnpj" type="cpf ou cnpj" />
+            </div>
+           
+
+            <input type="submit" value="cancelar!" />
+        
+            </form>
+     </main>
+            

@@ -5,6 +5,6 @@ namespace role_topMVC.ViewModels
 {
     public class HistoricoViewModel : BaseViewModel
     {
-        public List<Contrato> Contratos {get;set;}
+        public List<Pacote> Pacotes {get;set;}
     }
 }

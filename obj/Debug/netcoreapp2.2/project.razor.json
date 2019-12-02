@@ -2961,6 +2961,11 @@
   "RootNamespace": "role_topMVC",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\50539955833\\Documents\\role-topMVC\\Views\\Pacote\\Index.cshtml",
+      "TargetPath": "Views\\Pacote\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\50539955833\\Documents\\role-topMVC\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"

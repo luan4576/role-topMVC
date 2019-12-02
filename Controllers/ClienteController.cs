@@ -10,7 +10,7 @@ namespace role_topMVC.Controllers
     public class ClienteController : AbstractController
     {
         private ClienteRepository clienteRepository = new ClienteRepository();
-        private ContratoRepository contratoRepository = new ContratoRepository();
+        private PacoteRepository pacoteRepository = new PacoteRepository();
         [HttpGet]
         public IActionResult Login () {
             return View (new BaseViewModel()
@@ -69,10 +69,10 @@ namespace role_topMVC.Controllers
         public IActionResult Historico()
         {
             var emailCliente = ObterUsuarioSession();
-            var contratos = contratoRepository.ObterTodosPorCliente(emailCliente);
+            var pacotes = pacoteRepository.ObterTodosPorCliente(emailCliente);
 
             return View (new HistoricoViewModel (){
-                Contratos = contratos,
+                Pacotes = pacotes,
                 NomeView = "Historico",
                 UsuarioNome = ObterUsuarioNomeSession(),
                 UsuarioEmail = ObterUsuarioSession()
