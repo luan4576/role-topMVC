@@ -26,6 +26,10 @@
 
 <body class="flex-container">
     <header>
+    @if("Home".Equals(@Model.NomeView))
+        {
+            Html.RenderPartial("_HeaderHomePage");
+        }
     <nav>
         <div class="section-container1">
             <ul>
@@ -39,7 +43,6 @@
                 <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Home")#galeriadefotos'>galeria de fotos</a></li>
                 <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Home")#local'>Localizaçao</a></li>
                 <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index","Pacote")'>pacotes</a></li>
-                <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Home" asp-action="Index" class="active">login adm</a></li>
                 @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
                     {
                     <li class="bt-common-menu"><a onclick="toggleMobileMenu()"asp-controller="cliente" asp-action="Login" >login/cadastro</a></li>
@@ -53,10 +56,6 @@
         </div>
     </nav>
     <!--comentario para eu nao esquecer de colocar aqui o logo area -->
-    @if("Home".Equals(@Model.NomeView))
-        {
-            Html.RenderPartial("_HeaderHomePage");
-        }
     </header>
         @RenderBody()
     <footer>

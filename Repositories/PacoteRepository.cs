@@ -43,27 +43,66 @@ namespace role_topMVC.Repositories
 
          public List<Pacote> ObterTodosPorCliente(string email)
         {
-            var pedidosTotais = ObterTodos();
-            List<Pacote> pedidosCliente = new List<Pacote>();
-            foreach(var pedido in pedidosTotais)
+            var pacotesTotais = ObterTodos();
+            List<Pacote> pacotesCliente = new List<Pacote>();
+            foreach(var pacote in pacotesTotais)
             {
-                if(pedido.Cliente.Email.Equals(email))
+                if(pacote.Cliente.Email.Equals(email))
                 {
-                    pedidosCliente.Add(pedido);
+                    pacotesCliente.Add(pacote);
                 }
             }
-            return pedidosCliente;
+            return pacotesCliente;
+        }
+
+         public Pacote ObterPor(ulong id )
+        {
+            var pacotesTotais = ObterTodos();
+            foreach (var pacote in pacotesTotais)
+            {
+                if(pacote.Id == id)
+                {
+                    return pacote;
+                }
+            }
+            return null;
+        }
+
+        public bool Atualizar ( Pacote pacote)
+        {
+            var pacotesTotais = File.ReadAllLines(PATH);
+            var pacoteCSV = PrepararRegistroCSV(pacote);
+            var linhaPedido = -1;
+            var resultado = false;
+
+            for (int i = 0; i < pacotesTotais.Length; i++)
+            {
+                var idConvertido = ulong.Parse (ExtrairValorDoCampo ("id" ,pacotesTotais[i]));
+                if (pacote.Id.Equals(idConvertido))
+                {
+                    linhaPedido = i;
+                    resultado = true;
+                    break;
+                }
+            }
+
+            if(resultado) {
+                pacotesTotais[linhaPedido] = pacoteCSV;
+                File.WriteAllLines(PATH, pacotesTotais);
+            }
+
+            return resultado;
 
         }
 
-
-
+//escrever o resto das coisas//
          private string PrepararRegistroCSV(Pacote pacote)
         {
             Cliente cliente = pacote.Cliente;
+            Contrato contrato = pacote.Contrato;
             
 
-            return $"cliente_nome={cliente.Nome};cliente_endereco={cliente.Cpf};cliente_email={cliente.Email};preco-total={pacote.PrecoTotal}";
+            return $"id ={pacote.Id};status_pedido={pacote.Status};cliente_nome={cliente.Nome};cliente_endereco={cliente.Cpf};cliente_email={cliente.Email};preco-total={pacote.PrecoTotal}";
         }
 
     }
