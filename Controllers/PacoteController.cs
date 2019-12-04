@@ -43,7 +43,7 @@ namespace role_topMVC.Controllers
                 return View(pacote);
         }
   
-         public IActionResult Registrar(IFormCollection form)
+        public IActionResult Registrar(IFormCollection form)
         {
             Pacote pacote = new Pacote();
 
@@ -58,12 +58,14 @@ namespace role_topMVC.Controllers
             {
                 Nome = form ["nome"],
                 Email = form ["email"],
-                Cpf = form ["cpf"]
+                Cpf = form ["cpf"],
+                NumeroCartao = form["numeroCartao"],
+                SenhaCartao = form["senhaCartao"]
             };
 
             pacote.Cliente = cliente;
 
-            pacote.DataDoContrato = DateTime.Now;
+            pacote.DataContrato = DateTime.Now;
 
             pacote.PrecoTotal = pacote.PrecoTotal;
 

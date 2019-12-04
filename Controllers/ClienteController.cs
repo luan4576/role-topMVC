@@ -103,8 +103,10 @@ namespace role_topMVC.Controllers
             try{
             Cliente cliente = new Cliente (form["nome"],
                 form["Cpf"],
+                form["email"],
                 form["senha"],
-                form["email"]
+                form["numeroCartao"],
+                form["senhaCartao"]
                 );
 
                 clienteRepository.Inserir(cliente);

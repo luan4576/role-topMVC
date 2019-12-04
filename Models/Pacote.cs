@@ -8,16 +8,17 @@ namespace role_topMVC.Models
         public ulong Id {get;set;}
         public Cliente Cliente {get;set;}
         public Contrato Contrato {get;set;}
-        public DateTime DataDoContrato  {get;set;}
+        public DateTime DataContrato  {get;set;}
         public double PrecoTotal {get;set;}
         public uint Status {get;set;}
 
-        public Pacote()
+        public Pacote(DateTime dataContrato)
         {
             this.Cliente = new Cliente();
             this.Contrato = new Contrato();
             this.Id = 0;
             this.Status = (uint) StatusPacote.PENDENTE;
+            this.DataContrato = dataContrato;
         }
     }
 }

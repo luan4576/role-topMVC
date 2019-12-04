@@ -12,6 +12,7 @@ namespace role_topMVC.ViewModels
         {
             this.NomeUsuario = "Jovem";
             this.cliente = new Cliente();
+            this.Contratos = new List<Contrato>();
         }
     }
 }

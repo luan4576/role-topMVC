@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using role_topMVC.Models;
@@ -31,9 +32,16 @@ namespace role_topMVC.Repositories
             foreach (var linha in linhas)
             {
                 Pacote pacote = new Pacote();
-                pacote.Cliente.Nome = ExtrairValorDoCampo("cliente_nome", linha);
-                pacote.Cliente.Cpf = ExtrairValorDoCampo("cliente_cpf", linha);
+                pacote.Id = ulong.Parse (ExtrairValorDoCampo("id",linha));
                 pacote.Cliente.Email = ExtrairValorDoCampo("cliente_email", linha);
+                pacote.Cliente.Senha = ExtrairValorDoCampo("cliente_senha", linha);
+                pacote.Cliente.NumeroCartao =int.Parse( ExtrairValorDoCampo("cliente_numeroCartao",linha));
+                pacote.Cliente.SenhaCartao = ExtrairValorDoCampo("cliente_senhaCartao",linha);
+                pacote.Cliente.Cpf = ExtrairValorDoCampo("cliente_cpf", linha);
+                pacote.Contrato.Nome = ExtrairValorDoCampo("contrato_nome",linha);
+                pacote.Contrato.Preco = double.Parse (ExtrairValorDoCampo("contrato_preco",linha));
+                pacote.DataContrato = DateTime.Parse(ExtrairValorDoCampo("data_contrato",linha));
+                
 
                 pacotes.Add(pacote);
             }
@@ -102,7 +110,7 @@ namespace role_topMVC.Repositories
             Contrato contrato = pacote.Contrato;
             
 
-            return $"id ={pacote.Id};status_pedido={pacote.Status};cliente_nome={cliente.Nome};cliente_endereco={cliente.Cpf};cliente_email={cliente.Email};preco-total={pacote.PrecoTotal}";
+            return $"id ={pacote.Id};status_pedido={pacote.Status};cliente_email={cliente.Email};cliente_senha={cliente.Senha};cliente_numeroCartao={cliente.NumeroCartao};cliente_senhaCartao={cliente.SenhaCartao};cliente_cpf={cliente.Cpf};contrato_nome={contrato.Nome};cotrato_preco={contrato.Preco};data_contrato={pacote.DataContrato};preco-total={pacote.PrecoTotal}";
         }
 
     }

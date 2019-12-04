@@ -1,32 +1,50 @@
+@model role_topMVC.ViewModels.PacoteViewModel
 <main>
-        <h2>pagar</h2>
+        <h2>paga ai,@Model.NomeUsuario!</h2>
         <form method="POST" action='@Url.Action("Index","Pacote")'>
+            <div>
+                <label for="email">E-mail</label>
+                <br />
+                <input id="email" type="email"value="@Model.cliente.Email"name= "email" />
+            </div>
+        <div>
+                <label for="senha">senha</label>
+                <br />
+                <input id="senha" type="password"value="@Model.cliente.Senha"name="senha" />
+            </div>
 
             <div>
-                <label for="numero-do-cartao">numero do cartao</label>
+                <label for="numeroCartao">numero do cartao</label>
                 <br />
-                <input id="numero-do-cartao" type="numero-do-cartao" />
+                <input id="numeroCartao" type="numeroCartao"value="@Model.cliente.NumeroCartao"name = "senhaCartao" />
             </div>
 
             <div>
                 <label for="senha">senha do cartao</label>
                 <br />
-                <input id="senha-do-cartao" type="password" />
+                <input id="senhaCartao" type="password"value="@Model.cliente.SenhaCartao"name="senhaCartao" />
             </div>
             <div>
                     <label for="cpf-cnpj">cpf ou cnpj</label>
                     <br />
-                    <input id="cpf-cnpj" type="cpf-cnpj" />
+                    <input id="cpf-cnpj" type="cpf-cnpj"value="@Model.cliente.Cpf" />
                 </div>
-            <label for="pacotes">escolha o seu e contrate</label>
-            <a href="#">1 dia por apenas 10,000 mil </a>
-            <a href="#">2 dias por apenas 18,000 mil</a>
-            <a href="#">3 dias por apenas 27,000 mil</a>
-
+            <div class="field">
+                <div>
+                    <label for="contrato">escolha o seu Pacote e contrate</label>
+                    <select id="contrato" name="contrato" required>
+                        <option value="" disabled selected>Selecione</option>
+                        @foreach(var h in Model.Contratos){
+                        
+                            <option value=@h.Nome>@h.Nome por @h.Preco</option>
+                        }
+                    </select>
+                </div>
+            </div>
             <tr>
                 <label for="agende">agende seu dia</label>
             </tr>
-            <input id="data-nascimento" type="date" maxlength="20" minlength="3" name="data-nascimento" />
+            <input id="pacote" type="date" maxlength="20" minlength="3" value="@Model.pacote.DataContrato"name="dataPacote" />
 
             <input type="submit" value="efetuar pagamento!" />
         </form>
@@ -41,6 +59,17 @@
      <main>
         <h2>cancelar pagamento</h2>
         <form method="GET" action="index.html">
+
+             <div>
+                <label for="email">E-mail</label>
+                <br />
+                <input id="email" type="email" />
+            </div>
+        <div>
+                <label for="senha">senha</label>
+                <br />
+                <input id="senha" type="password" />
+            </div>
             <div>
                 <label for="numero do cartao">Numero do cartao</label>
                 <br />
@@ -50,7 +79,7 @@
             <div>
                 <label for="senha-do-cartao">senha do cartao</label>
                 <br />
-                <input id="senha-do-cartao" type="text" maxlength="20" minlength="3" name="endereco" />
+                <input id="senha-do-cartao" type="password" maxlength="20" minlength="3" name="endereco" />
             </div>
 
             <div>
