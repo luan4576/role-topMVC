@@ -2,7 +2,7 @@ namespace role_topMVC.ViewModels
 {
     public class RespostaViewModel : BaseViewModel
     {
-          public string Mensagem {get;set;}
+        public string Mensagem {get;set;}
 
         public RespostaViewModel()
         {

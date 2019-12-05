@@ -1,7 +1,7 @@
 @model role_topMVC.ViewModels.PacoteViewModel
 <main>
         <h2>paga ai,@Model.NomeUsuario!</h2>
-        <form method="POST" action='@Url.Action("Index","Pacote")'>
+        <form method="POST" action='@Url.Action("Registrar","Pacote")'>
             <div>
                 <label for="email">E-mail</label>
                 <br />
@@ -42,9 +42,9 @@
                 </div>
             </div>
             <tr>
-                <label for="agende">agende seu dia</label>
+                <label for="dataContrato">agende seu dia</label>
             </tr>
-            <input id="pacote" type="date" maxlength="20" minlength="3" value="@Model.pacote.DataContrato"name="dataPacote" />
+            <input id="dataContrato" type="date" maxlength="20" minlength="3"name="dataContrato" />
 
             <input type="submit" value="efetuar pagamento!" />
         </form>

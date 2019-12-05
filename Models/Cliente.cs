@@ -1,3 +1,5 @@
+using System;
+
 namespace role_topMVC.Models
 {
     public class Cliente
@@ -10,7 +12,10 @@ namespace role_topMVC.Models
         public string SenhaCartao {get;set;}
         
 
-        public Cliente(string nome ,string Cpf,string senha, string email,string numeroCartao,string senhaCartao)
+
+        
+
+        public Cliente(string nome ,string Cpf,string senha, string email,string numeroCartao,string senhaCartao )
         {
             this.Nome=nome;
             this.Cpf = Cpf;
@@ -18,6 +23,7 @@ namespace role_topMVC.Models
             this.Email=email;
             this.NumeroCartao = numeroCartao;
             this.SenhaCartao = senhaCartao;
+            
             
         }
 

@@ -12,13 +12,14 @@ namespace role_topMVC.Models
         public double PrecoTotal {get;set;}
         public uint Status {get;set;}
 
-        public Pacote(DateTime dataContrato)
+        public Pacote()
         {
             this.Cliente = new Cliente();
             this.Contrato = new Contrato();
             this.Id = 0;
             this.Status = (uint) StatusPacote.PENDENTE;
-            this.DataContrato = dataContrato;
+            this.DataContrato = DataContrato;
+            
         }
     }
 }

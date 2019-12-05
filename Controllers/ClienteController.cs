@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using role_topMVC.Enums;
 using role_topMVC.Models;
 using role_topMVC.Repositories;
 using role_topMVC.ViewModels;
@@ -109,14 +110,26 @@ namespace role_topMVC.Controllers
                 form["senhaCartao"]
                 );
 
+                cliente.TipoUsuario = (uint) TiposUsuario.CLIENTE;
                 clienteRepository.Inserir(cliente);
 
 
-            return View ("Sucesso");
+            return View ("Sucesso",new RespostaViewModel()
+            {
+                NomeView ="Cadastro",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
+            });
             }
             catch(Exception e)
             {
-                return View("Erro");
+                System.Console.WriteLine(e.StackTrace);
+                return View("Erro",new RespostaViewModel()
+                {
+                NomeView ="Cadastro",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
+                });
             }
         }
     }

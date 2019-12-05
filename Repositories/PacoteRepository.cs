@@ -7,7 +7,7 @@ namespace role_topMVC.Repositories
 {
     public class PacoteRepository : RepositoryBase
     {
-                private const string PATH = "Database/Pedido.csv";
+                private const string PATH = "Database/Pacote.csv";
         public PacoteRepository()
         {
             if (!File.Exists(PATH))
@@ -35,7 +35,7 @@ namespace role_topMVC.Repositories
                 pacote.Id = ulong.Parse (ExtrairValorDoCampo("id",linha));
                 pacote.Cliente.Email = ExtrairValorDoCampo("cliente_email", linha);
                 pacote.Cliente.Senha = ExtrairValorDoCampo("cliente_senha", linha);
-                pacote.Cliente.NumeroCartao =int.Parse( ExtrairValorDoCampo("cliente_numeroCartao",linha));
+                pacote.Cliente.NumeroCartao =  ExtrairValorDoCampo("cliente_numeroCartao",linha);
                 pacote.Cliente.SenhaCartao = ExtrairValorDoCampo("cliente_senhaCartao",linha);
                 pacote.Cliente.Cpf = ExtrairValorDoCampo("cliente_cpf", linha);
                 pacote.Contrato.Nome = ExtrairValorDoCampo("contrato_nome",linha);

@@ -52,6 +52,7 @@ namespace role_topMVC.Controllers
             contrato.Nome = nomeContrato;
             contrato.Preco = contratoRepository.ObterPrecoDe(nomeContrato);
             pacote.Contrato = contrato;
+            
 
 
             Cliente cliente = new Cliente()
@@ -60,7 +61,8 @@ namespace role_topMVC.Controllers
                 Email = form ["email"],
                 Cpf = form ["cpf"],
                 NumeroCartao = form["numeroCartao"],
-                SenhaCartao = form["senhaCartao"]
+                SenhaCartao = form["senhaCartao"],
+            
             };
 
             pacote.Cliente = cliente;

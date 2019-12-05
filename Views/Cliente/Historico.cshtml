@@ -1,0 +1,28 @@
+@model role_topMVC.ViewModels.HistoricoViewModel
+@{
+    ViewData["Title"] = "Pacotes - role-top";
+    ViewData["H2"] = "Histórico de Pacotes";
+}
+
+<main>
+    <h2>@ViewData["H2"]</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Contrato</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach( var pacote in Model.Pacotes ) {
+                <tr>
+                    <td>@pacote.DataContrato</td>
+                    <td>@pacote.Contrato.Nome</td>
+                    <td>@pacote.PrecoTotal</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</main>

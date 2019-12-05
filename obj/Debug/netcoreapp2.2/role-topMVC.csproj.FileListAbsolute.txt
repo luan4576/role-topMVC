@@ -62,3 +62,6 @@ C:\Users\50539955833\Documents\role-topMVC\obj\Debug\netcoreapp2.2\Razor\Views\S
 C:\Users\50539955833\Documents\role-topMVC\obj\Debug\netcoreapp2.2\Razor\Views\Cliente\Login.g.cshtml.cs
 C:\Users\50539955833\Documents\role-topMVC\obj\Debug\netcoreapp2.2\Razor\Views\Pacote\Index.g.cshtml.cs
 C:\Users\50539955833\Documents\role-topMVC\obj\Debug\netcoreapp2.2\Razor\Views\Administrador\Dashboard.g.cshtml.cs
+C:\Users\50539955833\Documents\role-topMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Erro.g.cshtml.cs
+C:\Users\50539955833\Documents\role-topMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Sucesso.g.cshtml.cs
+C:\Users\50539955833\Documents\role-topMVC\obj\Debug\netcoreapp2.2\Razor\Views\Cliente\Historico.g.cshtml.cs

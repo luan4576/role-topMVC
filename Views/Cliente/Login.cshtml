@@ -1,6 +1,6 @@
  <main>
         <h2>Login</h2>
-        <form method="POST" action="aprovar-eventos-adm.html">
+        <form method="POST" action='@Url.Action("Login","Cliente")'>
 
             <div>
                 <label for="email">E-mail</label>
@@ -14,9 +14,11 @@
                 <input id="senha" type="password" />
             </div>
 
-            <a onclick="toggleMobileMenu()"  href="pacotes.html">entrar</a>
-        </form>
+            <input type="submit" value="Entrar!"/>
 
+            <div id="link-cadastro">
+                <a href='@Url.Action("Index","Cadastro")'>Quero me cadastrar!</a>
+        </form>
     </main>
 
  
@@ -24,19 +26,13 @@
    
      <main>
         <h2>cadastro</h2>
-        <form method="GET" action="index.html">
+        <form method="POST" action='@Url.Action("CadastrarCliente","Cadastro")'>
             <div>
                 <label for="nome">Nome Completo</label>
                 <br />
                 <input id="nome" type="text" maxlength="20" minlength="3" name="nome"/>
             </div>
 
-            <div>
-                <label for="endereco">cpf ou cnpj</label>
-                <br />
-                <input id="endereco" type="text" maxlength="20" minlength="3" name="endereco" />
-            </div>
-            
             <div>
                 <label for="email">E-mail</label>
                 <br />
@@ -47,8 +43,14 @@
                 <br />
                 <input id="senha" type="password" />
             </div>
+            <div>
+                <label for="cpf">cpf ou cnpj</label>
+                <br />
+                <input id="cpf" type="text" maxlength="20" minlength="3" name="cpf" />
+            </div>
+            
 
-            <a onclick="toggleMobileMenu()"  href="pacotes.html">entrar</a>
+            <input type="submit" value="Finalizar cadastro" />
         
             </form>
      </main>
