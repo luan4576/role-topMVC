@@ -35,10 +35,9 @@ namespace role_topMVC.Repositories
                 pacote.Id = ulong.Parse (ExtrairValorDoCampo("id",linha));
                 pacote.Cliente.Email = ExtrairValorDoCampo("cliente_email", linha);
                 pacote.Cliente.Senha = ExtrairValorDoCampo("cliente_senha", linha);
-                pacote.Cliente.NumeroCartao =  ExtrairValorDoCampo("cliente_numeroCartao",linha);
-                pacote.Cliente.SenhaCartao = ExtrairValorDoCampo("cliente_senhaCartao",linha);
                 pacote.Cliente.Cpf = ExtrairValorDoCampo("cliente_cpf", linha);
                 pacote.Contrato.Nome = ExtrairValorDoCampo("contrato_nome",linha);
+               
                 pacote.Contrato.Preco = double.Parse (ExtrairValorDoCampo("contrato_preco",linha));
                 pacote.DataContrato = DateTime.Parse(ExtrairValorDoCampo("data_contrato",linha));
                 
@@ -104,13 +103,13 @@ namespace role_topMVC.Repositories
         }
 
 //escrever o resto das coisas//
-         private string PrepararRegistroCSV(Pacote pacote)
+        private string PrepararRegistroCSV(Pacote pacote)
         {
             Cliente cliente = pacote.Cliente;
             Contrato contrato = pacote.Contrato;
             
 
-            return $"id ={pacote.Id};status_pedido={pacote.Status};cliente_email={cliente.Email};cliente_senha={cliente.Senha};cliente_numeroCartao={cliente.NumeroCartao};cliente_senhaCartao={cliente.SenhaCartao};cliente_cpf={cliente.Cpf};contrato_nome={contrato.Nome};cotrato_preco={contrato.Preco};data_contrato={pacote.DataContrato};preco-total={pacote.PrecoTotal}";
+            return $"id ={pacote.Id};status_pedido={pacote.Status};cliente_email={cliente.Email};cliente_senha={cliente.Senha};cliente_cpf={cliente.Cpf};contrato_nome={contrato.Nome};cotrato_preco={contrato.Preco}; preco-total={pacote.PrecoTotal};data_contrato={pacote.DataContrato}";
         }
 
     }

@@ -5,7 +5,7 @@ namespace role_topMVC.Repositories
 {
     public class ClienteRepository : RepositoryBase
     {
-        private const string PATH = "Database/cliente.csv";
+        private const string PATH = "Database/Cliente.csv";
         public ClienteRepository()
         {
             if(!File.Exists(PATH))
@@ -44,7 +44,7 @@ namespace role_topMVC.Repositories
 
             private string PrepararRegistroCSV(Cliente cliente)
             {
-                return $"nome={cliente.Nome};cpf ={cliente.Cpf};senha={cliente.Senha};email={cliente.Email}";
+                return $"tipo_usuario ={cliente.TipoUsuario};nome={cliente.Nome};cpf ={cliente.Cpf};email={cliente.Email};senha={cliente.Senha};";
             }
     }
 }

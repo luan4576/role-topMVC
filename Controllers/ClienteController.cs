@@ -44,11 +44,21 @@ namespace role_topMVC.Controllers
                 {
                     if(cliente.Senha.Equals(senha))
                     {
+                        switch(cliente.TipoUsuario)
+                        {
+
+                        case (uint) TiposUsuario.CLIENTE:
                         HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
                         HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
-                    
-
+                        HttpContext.Session.SetString(SESSION_CLIENTE_USUARIO,cliente.TipoUsuario.ToString());
                         return RedirectToAction("Historico","Cliente");
+                        default:
+                        HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
+                        HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
+                        HttpContext.Session.SetString(SESSION_CLIENTE_USUARIO,cliente.TipoUsuario.ToString());
+                        return RedirectToAction("Dashboard","Administrador");
+                        }
+                        
                     }
                     else
                     {
@@ -89,6 +99,7 @@ namespace role_topMVC.Controllers
 
         }
 
+        
         public IActionResult Index () {
             return View (new BaseViewModel()
                 {
@@ -103,11 +114,9 @@ namespace role_topMVC.Controllers
             ViewData["Action"] = "Cadastro";
             try{
             Cliente cliente = new Cliente (form["nome"],
-                form["Cpf"],
-                form["email"],
+                form["cpf"],
                 form["senha"],
-                form["numeroCartao"],
-                form["senhaCartao"]
+                form["email"]
                 );
 
                 cliente.TipoUsuario = (uint) TiposUsuario.CLIENTE;

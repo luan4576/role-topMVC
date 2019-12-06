@@ -60,8 +60,6 @@ namespace role_topMVC.Controllers
                 Nome = form ["nome"],
                 Email = form ["email"],
                 Cpf = form ["cpf"],
-                NumeroCartao = form["numeroCartao"],
-                SenhaCartao = form["senhaCartao"],
             
             };
 

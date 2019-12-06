@@ -31,7 +31,7 @@ namespace role_topMVC.Repositories
             return preco;
         }
 
-         public List<Contrato> ObterTodos()
+        public List<Contrato> ObterTodos()
         {
             List<Contrato> contratos = new List<Contrato>();
             string [] linhas = File.ReadAllLines(PATH);
