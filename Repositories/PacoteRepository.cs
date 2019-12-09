@@ -109,7 +109,7 @@ namespace role_topMVC.Repositories
             Contrato contrato = pacote.Contrato;
             
 
-            return $"id ={pacote.Id};status_pedido={pacote.Status};cliente_email={cliente.Email};cliente_senha={cliente.Senha};cliente_cpf={cliente.Cpf};contrato_nome={contrato.Nome};cotrato_preco={contrato.Preco}; preco-total={pacote.PrecoTotal};data_contrato={pacote.DataContrato}";
+            return $"id={pacote.Id};status_pedido={pacote.Status};cliente_email={cliente.Email};cliente_senha={cliente.Senha};cliente_cpf={cliente.Cpf};contrato_nome={contrato.Nome};contrato_preco={contrato.Preco};preco-total={pacote.PrecoTotal};data_contrato={pacote.DataContrato}";
         }
 
     }

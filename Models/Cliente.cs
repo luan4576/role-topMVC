@@ -25,11 +25,10 @@ namespace role_topMVC.Models
         }
 
         public uint TipoUsuario {get;set;}
-        public int NumeroCartao {get;set;}
-        public string SenhaCartao {get;set;}
+       
         public Cliente()
         {
-    
+           
         }
     }
 }

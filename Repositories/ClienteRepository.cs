@@ -32,9 +32,10 @@ namespace role_topMVC.Repositories
                     {
                         Cliente c = new Cliente ();
                         c.Nome = ExtrairValorDoCampo("nome",linha);
-                        c.Cpf = ExtrairValorDoCampo("Cpf",linha);
+                        c.Cpf = ExtrairValorDoCampo("cpf",linha);
                         c.Email = ExtrairValorDoCampo("email", linha);
                         c.Senha = ExtrairValorDoCampo("senha", linha);
+                        c.TipoUsuario = uint.Parse(ExtrairValorDoCampo("tipo_usuario",linha));
                         return c;
                     }
                     
@@ -44,7 +45,7 @@ namespace role_topMVC.Repositories
 
             private string PrepararRegistroCSV(Cliente cliente)
             {
-                return $"tipo_usuario ={cliente.TipoUsuario};nome={cliente.Nome};cpf ={cliente.Cpf};email={cliente.Email};senha={cliente.Senha};";
+                return $"tipo_usuario={cliente.TipoUsuario};nome={cliente.Nome};cpf={cliente.Cpf};email={cliente.Email};senha={cliente.Senha}";
             }
     }
 }

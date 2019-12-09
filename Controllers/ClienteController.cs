@@ -28,7 +28,7 @@ namespace role_topMVC.Controllers
         
         {
             ViewData["Action"] = "Login";
-            try {
+
 
                 System.Console.WriteLine ("===============");
                 System.Console.WriteLine (form["email"]);
@@ -40,8 +40,10 @@ namespace role_topMVC.Controllers
 
                 var cliente = clienteRepository.ObterPor(usuario);
 
-                if (cliente != null)
-                {
+                    System.Console.WriteLine ("===============");
+                    System.Console.WriteLine (cliente.Email);
+                    System.Console.WriteLine (cliente.Senha);
+                    System.Console.WriteLine ("===============");
                     if(cliente.Senha.Equals(senha))
                     {
                         switch(cliente.TipoUsuario)
@@ -51,7 +53,7 @@ namespace role_topMVC.Controllers
                         HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
                         HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
                         HttpContext.Session.SetString(SESSION_CLIENTE_USUARIO,cliente.TipoUsuario.ToString());
-                        return RedirectToAction("Historico","Cliente");
+                        return RedirectToAction("index","Pacote");
                         default:
                         HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
                         HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
@@ -64,17 +66,13 @@ namespace role_topMVC.Controllers
                     {
                         return View ("Erro" , new RespostaViewModel("Senha incorreta"));
                     }
-                }
-                else
-                {
+                
 
-                return View ("Erro", new RespostaViewModel($"Usuario{usuario} não foi encontrado"));
-                }
 
-            } catch (Exception e) {
-                System.Console.WriteLine (e.StackTrace);
-                return View ("erro");
-            }
+
+
+                //return View ("Erro",new RespostaViewModel($"Usuario{usuario} não foi encontrado"));
+            
         }
 
         public IActionResult Historico()

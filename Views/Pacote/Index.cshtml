@@ -16,18 +16,18 @@
             <div>
                 <label for="numeroCartao">numero do cartao</label>
                 <br />
-                <input id="numeroCartao" type="numeroCartao"value="@Model.cliente.NumeroCartao"name = "senhaCartao" />
+                <input id="numeroCartao" type="numeroCartao" maxlength="16"value="@Model.cliente."name = "numeroCartao" />
             </div>
 
             <div>
                 <label for="senha">senha do cartao</label>
                 <br />
-                <input id="senhaCartao" type="password"value="@Model.cliente.SenhaCartao"name="senhaCartao" />
+                <input id="senhaCartao" type="password" maxlength="12"value="@Model.cliente."name="senhaCartao" />
             </div>
             <div>
                     <label for="cpf-cnpj">cpf ou cnpj</label>
                     <br />
-                    <input id="cpf-cnpj" type="cpf-cnpj"value="@Model.cliente.Cpf" />
+                    <input id="cpf-cnpj" type="cpf-cnpj" maxlength="11" value="@Model.cliente.Cpf" />
                 </div>
             <div class="field">
                 <div>

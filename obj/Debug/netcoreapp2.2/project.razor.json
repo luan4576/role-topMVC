@@ -2981,6 +2981,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\50539955833\\Documents\\role-topMVC\\Views\\Galeria\\Fotos.cshtml",
+      "TargetPath": "Views\\Galeria\\Fotos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\50539955833\\Documents\\role-topMVC\\Views\\Shared\\Sucesso.cshtml",
       "TargetPath": "Views\\Shared\\Sucesso.cshtml",
       "FileKind": "mvc"

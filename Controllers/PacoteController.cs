@@ -59,8 +59,7 @@ namespace role_topMVC.Controllers
             {
                 Nome = form ["nome"],
                 Email = form ["email"],
-                Cpf = form ["cpf"],
-            
+                Cpf = form ["cpf"]
             };
 
             pacote.Cliente = cliente;

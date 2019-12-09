@@ -50,8 +50,8 @@
                         <tr>
                             <td>@pacote.Cliente.Nome</td>
                             <td>@pacote.Cliente.Cpf</td>
-                            <td>@pacote.Cadastro.Nome</td>
-                             <td><a href='@Url.Action("Aprovar", "Pacote", new {id = @pacote.Id})'><i class="fas fa-check"></i></a></td>
+                            <td>@pacote.Cliente.Nome</td>
+                            <td><a href='@Url.Action("Aprovar", "Pacote", new {id = @pacote.Id})'><i class="fas fa-check"></i></a></td>
                             <td><a href='@Url.Action("Reprovar", "Pacote", new {id = @pacote.Id})'><i class="fas fa-times"></i></a></td>
                         </tr>
                     }
