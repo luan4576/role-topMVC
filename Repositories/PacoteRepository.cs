@@ -18,8 +18,9 @@ namespace role_topMVC.Repositories
 
         public bool Inserir(Pacote pacote)
         {
+            var quantidadeLinhas = File.ReadAllLines(PATH).Length;
+            pacote.Id = (ulong) ++quantidadeLinhas;
             var linha = new string [] {PrepararRegistroCSV(pacote)};
-            
             File.AppendAllLines(PATH,linha);
             return true;
         }
@@ -33,11 +34,11 @@ namespace role_topMVC.Repositories
             {
                 Pacote pacote = new Pacote();
                 pacote.Id = ulong.Parse (ExtrairValorDoCampo("id",linha));
-                pacote.Cliente.Email = ExtrairValorDoCampo("cliente_email", linha);
-                pacote.Cliente.Senha = ExtrairValorDoCampo("cliente_senha", linha);
-                pacote.Cliente.Cpf = ExtrairValorDoCampo("cliente_cpf", linha);
+                pacote.Status = uint.Parse(ExtrairValorDoCampo("status_pacote", linha));
+                pacote.Cliente.Email = ExtrairValorDoCampo("cliente_email",linha);
+                pacote.Cliente.Senha = ExtrairValorDoCampo("cliente_senha",linha);
+                pacote.Cliente.Cpf = ExtrairValorDoCampo("cliente_cpf",linha);
                 pacote.Contrato.Nome = ExtrairValorDoCampo("contrato_nome",linha);
-               
                 pacote.Contrato.Preco = double.Parse (ExtrairValorDoCampo("contrato_preco",linha));
                 pacote.DataContrato = DateTime.Parse(ExtrairValorDoCampo("data_contrato",linha));
                 
@@ -79,7 +80,7 @@ namespace role_topMVC.Repositories
         {
             var pacotesTotais = File.ReadAllLines(PATH);
             var pacoteCSV = PrepararRegistroCSV(pacote);
-            var linhaPedido = -1;
+            var linhaPacote = -1;
             var resultado = false;
 
             for (int i = 0; i < pacotesTotais.Length; i++)
@@ -87,14 +88,14 @@ namespace role_topMVC.Repositories
                 var idConvertido = ulong.Parse (ExtrairValorDoCampo ("id" ,pacotesTotais[i]));
                 if (pacote.Id.Equals(idConvertido))
                 {
-                    linhaPedido = i;
+                    linhaPacote= i;
                     resultado = true;
                     break;
                 }
             }
 
             if(resultado) {
-                pacotesTotais[linhaPedido] = pacoteCSV;
+                pacotesTotais[linhaPacote] = pacoteCSV;
                 File.WriteAllLines(PATH, pacotesTotais);
             }
 
@@ -102,14 +103,14 @@ namespace role_topMVC.Repositories
 
         }
 
-//escrever o resto das coisas//
+
         private string PrepararRegistroCSV(Pacote pacote)
         {
             Cliente cliente = pacote.Cliente;
             Contrato contrato = pacote.Contrato;
             
 
-            return $"id={pacote.Id};status_pedido={pacote.Status};cliente_email={cliente.Email};cliente_senha={cliente.Senha};cliente_cpf={cliente.Cpf};contrato_nome={contrato.Nome};contrato_preco={contrato.Preco};preco-total={pacote.PrecoTotal};data_contrato={pacote.DataContrato}";
+            return $"id={pacote.Id};status_pacote={pacote.Status};cliente_email={cliente.Email};cliente_senha={cliente.Senha};cliente_cpf={cliente.Cpf};contrato_nome={contrato.Nome};contrato_preco={contrato.Preco};preco-total={pacote.PrecoTotal};data_contrato={pacote.DataContrato}";
         }
 
     }

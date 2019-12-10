@@ -1,4 +1,1 @@
-id=0;status_pedido=1;cliente_email=lixo@123;cliente_senha=;cliente_cpf=;contrato_nome=contrato sem adicionais;contrato_preco=10;preco-total=0;data_contrato=06/12/2019 10:53:46
-id=0;status_pedido=0;cliente_email=lixo@123;cliente_senha=;cliente_cpf=;contrato_nome=contrato com luz ;contrato_preco=12;preco-total=0;data_contrato=09/12/2019 09:54:56
-id=0;status_pedido=0;cliente_email=fabio@123;cliente_senha=;cliente_cpf=;contrato_nome=contrato com luz e iluminaçao ;contrato_preco=14;preco-total=0;data_contrato=09/12/2019 10:17:06
-id=0;status_pedido=0;cliente_email=lixo@123;cliente_senha=;cliente_cpf=;contrato_nome=contrato com luz ;contrato_preco=12;preco-total=0;data_contrato=09/12/2019 10:41:58
+id=1;status_pacote=1;cliente_email=lixo@123;cliente_senha=;cliente_cpf=;contrato_nome=contrato sem adicionais;contrato_preco=10;preco-total=0;data_contrato=10/12/2019 11:23:43
