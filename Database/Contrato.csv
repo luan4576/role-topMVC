@@ -1,4 +1,8 @@
-contrato sem adicionais; 10,000
-contrato com luz ;12,000
-contrato com iluminaçao;12,000
-contrato com luz e iluminaçao ;14,000
+contrato publico sem adicionais;10;mil
+contrato publico com som ;12,000;mil
+contrato publico com iluminaçao;12,000;mil
+contrato publico com som e iluminaçao;14,000;mil
+contrato privado sem adicionais;10,000;mil
+contrato privado com som ;12,000;mil
+contrato privado com iluminaçao;12,000;mil
+contrato privado com som e iluminaçao;14,000;mil   

@@ -1,11 +1,11 @@
 @model role_topMVC.ViewModels.PacoteViewModel
 <main>
-        <h2>paga ai,@Model.NomeUsuario!</h2>
+        <h2>paga ai!</h2>
         <form method="POST" action='@Url.Action("Registrar","Pacote")'>
             <div>
                 <label for="email">E-mail</label>
                 <br />
-                <input id="email" type="email"value="@Model.cliente.Email"name= "email" />
+                <input id="email" type="email"value="@Model.cliente.Email"name="email" />
             </div>
         <div>
                 <label for="senha">senha</label>
@@ -27,7 +27,7 @@
             <div>
                     <label for="cpf-cnpj">cpf ou cnpj</label>
                     <br />
-                    <input id="cpf-cnpj" type="cpf-cnpj" maxlength="11" value="@Model.cliente.Cpf" />
+                    <input id="cpf-cnpj" type="cpf-cnpj" maxlength="11" value="@Model.cliente.Cpf" name="cpf" />
                 </div>
             <div class="field">
                 <div>

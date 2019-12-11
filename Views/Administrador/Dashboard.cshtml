@@ -24,10 +24,12 @@
             <table>
                 <thead>
                     <tr>
-                        <th rowspan="2">Nome</th>
+                        <th rowspan="2">Email</th>  
                         <th rowspan="2">cpf</th>
+                        <th rowspan="2">tipo de evento</th>
                         <th colspan="2">dia do evento</th>
                         <th colspan="2" rowspan="2">Aprovar</th>
+                        
                     </tr>
 
                     <tr>
@@ -35,8 +37,9 @@
                         <th></th>
                         <th></th>
                         <th></th>
+                        <th></th>
                     </tr>
-                
+
                 </thead>
                 <tfoot>
                     <tr>
@@ -49,9 +52,10 @@
                     @foreach (var pacote in Model.pacotes)
                     {
                         <tr>
-                            <td>@pacote.Cliente.Nome</td>
+                            <td>@pacote.Cliente.Email</td>
                             <td>@pacote.Cliente.Cpf</td>
                             <td>@pacote.Contrato.Nome</td>
+                            <td>@pacote.DataContrato</td>
                             <td><a href='@Url.Action("Aprovar", "Pacote", new {id = @pacote.Id})'><i class="fas fa-check"></i></a></td>
                             <td><a href='@Url.Action("Reprovar", "Pacote", new {id = @pacote.Id})'><i class="fas fa-times"></i></a></td>
                         </tr>
