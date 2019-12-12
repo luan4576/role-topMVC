@@ -1,2 +1,3 @@
 tipo_usuario=0;nome=Administrador;cpf=;email=admin@email.com;senha=123123
 tipo_usuario=1;nome=lixo;cpf=12345678;email=lixo@123;senha=123456
+tipo_usuario=1;nome=loko;cpf=12345678;email=loko@123;senha=123456
